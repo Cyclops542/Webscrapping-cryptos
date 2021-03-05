@@ -1,11 +1,8 @@
 from selenium import webdriver
-
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
-
+from scrapping.domain import Domain
 
 def main():
-    driver.get("https://www.binance.com/en")
-    driver.find_element_by_id("__APP")
+    binance = Domain()
+    binance.initialize_search()
 
 main()
